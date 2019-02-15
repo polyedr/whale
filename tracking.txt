@@ -1,0 +1,363 @@
+https://www.kaggle.com/c/humpback-whale-identification
+
+data augmentation:
+http://ai-news.ru/2018/04/kak_rabotat_s_glubokim_obucheniem_kogda_u_vas_malo_dannyh.html
+
+
+https://keras.io/preprocessing/image/
+https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html
+https://stackoverflow.com/questions/51526220/data-augmentation-in-keras-for-large-datasets
+
+
+https://github.com/aleju/imgaug/issues/66
+https://snow.dog/blog/data-augmentation-for-small-datasets
+
+maybe interesting: (possible solution)
+https://www.novatec-gmbh.de/en/blog/keras-data-augmentation-for-cnn/
+https://github.com/hbrammer/blog-keras-cnn-augmentation
+
+ImportError: cannot import name 'transform_matrix_offset_center'
+https://stackoverflow.com/questions/51311062/cant-import-apply-transform-from-keras-preprocessing-image
+
+https://www.kaggle.com/hexietufts/easy-to-use-keras-imagedatagenerator
+
+
+https://www.pyimagesearch.com/2018/12/24/how-to-use-keras-fit-and-fit_generator-a-hands-on-tutorial/
+
+https://medium.com/nanonets/nanonets-how-to-use-deep-learning-when-you-have-limited-data-f68c0b512cab
+https://medium.com/nanonets/how-to-use-deep-learning-when-you-have-limited-data-part-2-data-augmentation-c26971dc8ced
+
+https://www.codesofinterest.com/2018/02/using-data-augmentations-in-keras.html
+
+maybe interesting:
+https://www.kaggle.com/moghazy/guide-to-cnns-with-data-augmentation-keras
+
+https://datascience.stackexchange.com/questions/37621/data-augmentation-recommended-pipeline
+
+
+ok 1. Run the testing example blog-keras-cnn-augmentation
+2. Run the adapted code with whales data. The main code source should be obtaoned from https://github.com/hbrammer/blog-keras-cnn-augmentation
+can upload images from example https://www.kaggle.com/moghazy/guide-to-cnns-with-data-augmentation-keras
+train.csv: the file was prepared already
+test.csv: this file should be built based on images in folder test
+https://code-maven.com/listing-a-directory-using-python
+https://dzone.com/articles/listing-a-directory-with-python
+https://stackoverflow.com/questions/7152762/how-to-redirect-print-output-to-a-file-using-python
+Input dataset should be based on processed images.
+How to process images before Keras
+data preprocessing: p. 135
+The approach for small datasets is placed at http://localhost:8888/notebooks/deep-learning-with-python-notebooks/5-Copy1.2-using-convnets-with-small-datasets-input.ipynb
+cats and dogs example:
+test, train, validation
+
+test
+    cats
+    dogs
+
+train
+    cats
+    dogs
+
+validation
+    cats
+    dogs
+
+First in use were train_dir and validation_dir only.
+Maybe test_dir is the directory where are stored images.
+But for cats and dogs dataset the initial train folder was splitted to train, test and validation, even that test folder was existed initially.
+
+Loop over all the files in directory
+Create list with all the filenames
+Copy first half filenames to the train folder
+Copy second half filenames to the train folder
+
+https://www.tutorialspoint.com/How-can-I-iterate-over-files-in-a-given-directory-in-Python
+maybe interesting:
+https://swcarpentry.github.io/python-novice-inflammation/04-files/
+check current directory
+https://stackoverflow.com/questions/1810743/how-to-set-the-current-working-directory
+
+Data preprocessing:
+Maybe first process image to data without augmentation.
+Later use imagedatagenerator on train_dir and validation_dir
+
+3. Prepare the final model
+4. Submit data
+5. Check the results
+
+
+split the dataset to directories
+
+calculate
+
+
+How to generate data from images?
+How to split categories between folders? Should categories be splitted, or I can skip the step
+.flow_from_directory
+https://medium.com/@vijayabhaskar96/tutorial-image-classification-with-keras-flow-from-directory-and-generators-95f75ebe5720
+maybe should use flow_from_dataframe
+https://keras.io/preprocessing/image/#flow_from_dataframe
+https://medium.com/@vijayabhaskar96/tutorial-on-keras-flow-from-dataframe-1fd4493d237c
+input a Pandas dataframe which contains the filenames(with or without the extensions) column and a column which has the class names and directly read the images from the directory with their respective class names mapped
+
+How to save Keras model?
+https://keras.io/getting-started/faq/#how-can-i-save-a-keras-model
+https://machinelearningmastery.com/save-load-keras-deep-learning-models/
+
+
+maybe attempt debnse layer with value 8192, 16384
+
+
+11.02.2019
+https://stackoverflow.com/questions/17077494/how-do-i-convert-a-ipython-notebook-into-a-python-file-via-commandline
+cd /home/administrator/Keras/blog-keras-cnn-augmentation
+jupyter nbconvert --to script Post-whalesdetection-V1.ipynb
+
+11.02.2019
+kaggle kernels
+https://www.kaggle.com/docs/kernels
+python kernel example:
+https://www.kaggle.com/pmarcelino/comprehensive-data-exploration-with-python
+kernel example whale
+https://www.kaggle.com/iafoss/similarity-resnext50-0-771-lb-kernel-time-limit
+# This Python 3 environment comes with many helpful analytics libraries installed
+# It is defined by the kaggle/python docker image: https://github.com/kaggle/docker-python
+# For example, here's several helpful packages to load in 
+
+import numpy as np # linear algebra
+import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
+
+# Input data files are available in the "../input/" directory.
+# For example, running this (by clicking run or pressing Shift+Enter) will list the files in the input directory
+
+import os
+print(os.listdir("../input"))
+
+# Any results you write to the current directory are saved as output.
+
+run all in kernel
+https://www.kaggle.com/getting-started/49880
+
+
+Whales competition evaluation
+https://www.kaggle.com/c/humpback-whale-identification#evaluation
+
+
+Where is my output file?
+https://www.kaggle.com/szamil/where-is-my-output-file
+
+maybe interesting:
+Submitting From A Kernel
+https://www.kaggle.com/dansbecker/submitting-from-a-kernel
+
+
+How to train network to recognize images with threshold to generate for some images "unknown" image class
+https://www.reddit.com/r/MachineLearning/comments/7t3xei/d_detecting_unknown_classes/
+https://ai.stackexchange.com/questions/4889/how-to-implement-an-unknown-class-in-nn-classification
+https://www.researchgate.net/post/how_to_determine_an_unknown_class_in_connvolutional_neural_network_using_python
+https://www.quora.com/In-deep-learning-how-do-you-classify-an-image-as-unknown
+https://machinelearningmastery.com/multi-class-classification-tutorial-keras-deep-learning-library/
+
+google: "keras multiple class assignment"
+How to train neural network to detect multiple probabilities
+https://datascience.stackexchange.com/questions/41698/how-to-apply-class-weight-to-a-multi-output-model
+https://datascience.stackexchange.com/questions/41698/how-to-apply-class-weight-to-a-multi-output-model
+
+
+https://stackoverflow.com/questions/38971293/get-class-labels-from-keras-functional-model
+
+Questions
+Done. 1. How to read output files after the kernel running
+Done. 2. How to prevent differences before the writing output
+Done. 3. How to prevent differences while calculating models
+4. How to apply an efficient network architecture
+
+
+How to download data from the kernel
+https://www.kaggle.com/questions-and-answers/56135
+Where is my output file
+https://www.kaggle.com/szamil/where-is-my-output-file
+How to download csv output file from kernel?
+https://www.kaggle.com/getting-started/58426
+Submitting From A Kernel
+https://www.kaggle.com/dansbecker/submitting-from-a-kernel/
+
+results: 7961 images
+results_pred: 7937 predictions.
+Why these numbers are different?
+Sample_submission contains 7961 images
+Folder "test" contains 7960 files
+
+So, predictions (results_pred) contain incorrect number of results now.
+To solve this,
+https://medium.com/@vijayabhaskar96/tutorial-on-keras-flow-from-dataframe-1fd4493d237c
+test_generator.reset()
+pred=model.predict_generator(test_generator,
+steps=STEP_SIZE_TEST+1,
+
+3. How to prevent differences while calculating models
+number of subparts to split
+ok with 32, 64, 128
+crashed at 256
+
+error OOM
+model.add(Dense(8192))
+When 128 crashed on non-first attempt even with model.add(Dense(512))
+How to solve Error of ResourceExhaustedError in Tensorflow
+https://www.kaggle.com/questions-and-answers/62946
+
+128 crashed
+96 crashed
+80 ok
+
+
+4. How to apply an efficient network architecture
+
+Multiple class detection
+Maybe remove new whale images on start
+
+13.02.2019
+should prepare MLP network kernel
+
+for the convnet:
+multiple classes labels
+balance imbalanced classes (image generator)
+detect unknown class (new whale)
+other kinds of image processing
+convnet architecture
+measure loss value at convnet
+
+Image Classification: Complete Workflow
+https://towardsdatascience.com/image-classifier-complete-workflow-a9e0003c80ba
+
+The Keras 4 Step Workflow
+https://www.kdnuggets.com/2018/06/keras-4-step-workflow.html
+1.    Define the training data
+2.    Define a neural network model
+3.    Configure the learning process
+4.    Train the model 
+    
+Building Powerful Image Classification Convolutional Neural Network using Keras (cats vs dogs)
+https://medium.com/datadriveninvestor/building-powerful-image-classification-convolutional-neural-network-using-keras-a1839d0ff298
+
+maybe interesting:
+Multi class Fish Classification on Images using Transfer Learning and Keras
+https://medium.com/learning-machine-learning/multi-class-fish-classification-from-images-with-transfer-learning-using-keras-335125637544
+data augmentation, batch normalization
+check what does batch normalization mean: maybe add a new Dense layer with dropout and batch normalization on top of it to predict the final images
+
+check how image were processed by other participants
+maybe remove ('new whale')
+
+vgg-16
+https://gist.github.com/baraldilorenzo/07d7802847aaad0a35d3
+https://www.quora.com/What-is-the-VGG-neural-network
+
+vgg 7
+https://towardsdatascience.com/only-numpy-implementing-mini-vgg-vgg-7-and-softmax-layer-with-interactive-code-8994719bcca8
+
+maybe interesting (here is images multiplying 15x is described):
+Deep learning unbalanced training data?Solve it like this.
+https://mc.ai/deep-learning-unbalanced-training-datasolve-it-like-this/
+
+https://github.com/mmcdermo/Humpback-Recognition-Deep-CNN
+
+Prepare distribution of labels frequences in dataset
+
+
+preprocessing:
+new whale: remove
+1: remove
+maybe check images for duplications
+2-6: multiply by 15
+
+maybe use cropped rescaled square images after
+
+data augmentation with generator
+
+image augmentation library:
+https://github.com/aleju/imgaug
+
+
+second advice:
+https://www.kaggle.com/xhlulu/exploration-and-preprocessing-for-keras-224x224
+https://www.kaggle.com/iafoss/similarity-resnext50-0-771-lb-kernel-time-limit
+https://www.kaggle.com/seesee/siamese-pretrained-0-822
+https://www.kaggle.com/pestipeti/keras-cnn-starter
+https://www.kaggle.com/suicaokhoailang/generating-whale-bounding-boxes
+
+maybe interesting (simple example):
+https://www.kaggle.com/truocpham/keras-vgg-baseline
+https://www.kaggle.com/hexadd5/simple-resnet50-with-keras # one more multiple classes output example is here
+
+maybe multiple classes output example is here:
+https://www.kaggle.com/twhitehurst3/humback-detection-keras-tranfer-learning
+maybe interesting (starter code, maybe good simple image pre-processing):
+https://www.kaggle.com/orhansertkaya/cnn-humpback-whale-identification-with-keras
+
+Siamese networks applied to face recognition are possible to be applied here.
+
+https://stackoverflow.com/questions/38971293/get-class-labels-from-keras-functional-model
+https://github.com/keras-team/keras/issues/2524
+
+Multiple output was prepared based on https://www.kaggle.com/hexadd5/simple-resnet50-with-keras
+Now preprocessing.
+remove new_whales
+https://stackoverflow.com/questions/18172851/deleting-dataframe-row-in-pandas-based-on-column-value
+remove single values
+https://stackoverflow.com/questions/33071182/remove-values-that-appear-only-once-in-a-dataframe-column
+
+Now is possible to prepare the simple network.
+It looks like vgg 19 without part 3 works better
+
+Whale Keras V7: 1% per iteration
+
+Try image augmentation
+https://mc.ai/deep-learning-unbalanced-training-datasolve-it-like-this/
+
+history examples:
+https://www.kaggle.com/truocpham/keras-vgg-baseline
+https://www.kaggle.com/orhansertkaya/cnn-humpback-whale-identification-with-keras
+https://www.kaggle.com/iamarjunchandra/keras-cnn-whale-detection-beginner-model
+https://www.kaggle.com/pestipeti/keras-cnn-starter
+
+preprocessing with frequency bars:
+https://www.kaggle.com/xhlulu/exploration-and-preprocessing-for-keras-224x224
+
+15.02.2019
+Add github project
+Add data augmentation step 1
+Add data augmentation step 2
+Add history check
+Add MLP version of the kernel
+Improve existed descriptions of kernels.
+
+Check siamese networks to improve.
+
+simple MLP model:
+https://www.learnopencv.com/image-classification-using-feedforward-neural-network-in-keras/
+https://www.learnopencv.com/image-classification-using-convolutional-neural-networks-in-keras/
+simple MLP example:
+https://towardsdatascience.com/basics-of-image-classification-with-keras-43779a299c8b
+simple convolution example:
+https://towardsdatascience.com/image-classification-in-10-minutes-with-mnist-dataset-54c35b77a38d
+
+new whale threshold
+https://www.kaggle.com/yvansraka/cnn-keras-with-new-whale-threeshold
+https://www.kaggle.com/pestipeti/keras-cnn-starter
+
+vgg19
+https://www.kaggle.com/ashishpatel26/vgg-19-for-humpback-classification
+bounding box
+https://www.kaggle.com/josemontiel/humpback-whale-bounding-box-cropped-dataset
+simple MLP example, simple cnn with data augmentatione example
+https://www.kaggle.com/nacicansao/simple-cnn
+
+
+Started git project
+
+Humpback whale identification keras
+
+git config --global user.email "info@poly-edr.com"
+git config --global user.name "Ivan"
+
