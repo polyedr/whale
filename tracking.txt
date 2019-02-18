@@ -3,7 +3,6 @@ https://www.kaggle.com/c/humpback-whale-identification
 data augmentation:
 http://ai-news.ru/2018/04/kak_rabotat_s_glubokim_obucheniem_kogda_u_vas_malo_dannyh.html
 
-
 https://keras.io/preprocessing/image/
 https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html
 https://stackoverflow.com/questions/51526220/data-augmentation-in-keras-for-large-datasets
@@ -325,10 +324,10 @@ preprocessing with frequency bars:
 https://www.kaggle.com/xhlulu/exploration-and-preprocessing-for-keras-224x224
 
 15.02.2019
-Add github project
-Add data augmentation step 1
-Add data augmentation step 2
-Add history check
+Ready. Add github project
+Ready. Add history check
+Augmentation is ready.    Add data augmentation step 1
+    Add data augmentation step 2
 Add MLP version of the kernel
 Improve existed descriptions of kernels.
 
@@ -360,4 +359,34 @@ Humpback whale identification keras
 
 git config --global user.email "info@poly-edr.com"
 git config --global user.name "Ivan"
+
+18.02.2019
+v11 with one-value whales
+augmentation
+
+maybe interesting, class weights for imbalanced classes:
+https://datascience.stackexchange.com/questions/13490/how-to-set-class-weights-for-imbalanced-classes-in-keras
+https://stackoverflow.com/questions/42586475/is-it-possible-to-automatically-infer-the-class-weight-from-flow-from-directory
+maybe interesting:
+https://stackoverflow.com/questions/44666910/keras-image-preprocessing-unbalanced-data
+
+mlp keras
+https://stackoverrun.com/ru/q/12616864
+https://www.kaggle.com/c/talkingdata-mobile-user-demographics/discussion/22567
+
+maybe interesting:
+https://medium.com/@vijayabhaskar96/tutorial-image-classification-with-keras-flow-from-directory-and-generators-95f75ebe5720
+
+jupyter nbconvert --to script kernel_simple_keras_mlp.ipynb
+
+maybe interesting:
+Siamese network Keras
+https://towardsdatascience.com/one-shot-learning-with-siamese-networks-using-keras-17f34e75bb3d
+maybe interesting:
+https://sorenbouma.github.io/blog/oneshot/
+
+https://github.com/sorenbouma/keras-oneshot/blob/master/SiameseNet.ipynb
+
+
+
 
