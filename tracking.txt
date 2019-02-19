@@ -387,6 +387,53 @@ https://sorenbouma.github.io/blog/oneshot/
 
 https://github.com/sorenbouma/keras-oneshot/blob/master/SiameseNet.ipynb
 
+19.02.2019
+keras siamese faces recognition
+https://github.com/chen0040/keras-face
+https://github.com/anktplwl91/Face-Recognition
+https://github.com/gregwchase/siamese_faces
+https://github.com/susantabiswas/FaceRecog
+https://susantabiswas.github.io/FaceRecog/
 
+keras siamese
+https://github.com/Goldesel23/Siamese-Networks-for-One-Shot-Learning
+https://github.com/aerdem4/kaggle-quora-dup
+https://github.com/AKASH2907/bird_species_classification
+https://github.com/hsakas/siamese_similarity_model
+
+keras siamese
+https://stackoverflow.com/questions/38584268/implementing-a-siamese-nn-in-keras
+https://github.com/rstudio/keras/blob/master/vignettes/examples/mnist_siamese_graph.py
+https://github.com/keras-team/keras/blob/master/examples/cifar10_cnn.py#L60
+https://stackoverflow.com/questions/35214262/convolutional2d-siamese-network-in-keras?noredirect=1&lq=1
+http://yann.lecun.com/exdb/publis/pdf/chopra-05.pdf
+https://thelonenutblog.wordpress.com/2018/02/13/how-to-potty-train-a-siamese-network/
+https://stanford.edu/~shervine/blog/keras-how-to-generate-data-on-the-fly
+
+maybe interesting:
+https://neurohive.io/ru/tutorial/raspoznavanie-lica-facenet/
+https://github.com/Skuldur/facenet-face-recognition
+
+maybe interesting:
+И обучим её решать классическую задачу классификации на нашем обучающем множестве: 
+https://habr.com/ru/post/317798/
+https://arxiv.org/pdf/1503.03832.pdf
+
+google "TPE vs siamese network"
+https://blogs.technet.microsoft.com/machinelearning/2018/07/10/how-to-use-siamese-network-and-pre-trained-cnns-for-fashion-similarity-matching/
+
+maybe interesting:
+https://github.com/anktplwl91/Face-Recognition
+https://thelonenutblog.wordpress.com/2018/02/13/how-to-potty-train-a-siamese-network/
+
+
+Train the Siamese network on pairs of digits
+https://github.com/rstudio/keras/blob/master/vignettes/examples/mnist_siamese_graph.py
+Train the Siamese network on pairs of images
+Train the Siamese network on multiple images (imbalanced number of classes to pair)
+Maybe apply the image generator (augment images)
+Maybe detect whales flukes on the images and pre-process the whole dataset with this feature in use.
+Improve the initial Siamese network structure
+Predict the output
 
 
