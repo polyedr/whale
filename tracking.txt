@@ -436,4 +436,21 @@ Maybe detect whales flukes on the images and pre-process the whole dataset with 
 Improve the initial Siamese network structure
 Predict the output
 
+How to create training+test positive and negative pairs?
+To answer first check the structure of the mnist dataset and its numpy structures.
+
+Pair/Triplet mining for Siamese/Triplet networks
+https://www.reddit.com/r/MachineLearning/comments/6bngt5/pairtriplet_mining_for_siamesetriplet_networks/
+
+This library is possible to be used for data generation
+Python library for extracting mini-batches of data from a data source for the purpose of training neural networks 
+https://github.com/Britefury/batchup
+Random sample of paired lists in Python
+https://stackoverflow.com/questions/32576914/random-sample-of-paired-lists-in-python
+
+def create_pairs(x, digit_indices)
+x: train or test dataset
+digit_indices: digit_indices = [np.where(y_train == i)[0] for i in range(10)], this is a target variable
+
+
 
