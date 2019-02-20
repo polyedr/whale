@@ -427,15 +427,6 @@ https://github.com/anktplwl91/Face-Recognition
 https://thelonenutblog.wordpress.com/2018/02/13/how-to-potty-train-a-siamese-network/
 
 
-Train the Siamese network on pairs of digits
-https://github.com/rstudio/keras/blob/master/vignettes/examples/mnist_siamese_graph.py
-Train the Siamese network on pairs of images
-Train the Siamese network on multiple images (imbalanced number of classes to pair)
-Maybe apply the image generator (augment images)
-Maybe detect whales flukes on the images and pre-process the whole dataset with this feature in use.
-Improve the initial Siamese network structure
-Predict the output
-
 How to create training+test positive and negative pairs?
 To answer first check the structure of the mnist dataset and its numpy structures.
 
@@ -453,4 +444,58 @@ x: train or test dataset
 digit_indices: digit_indices = [np.where(y_train == i)[0] for i in range(10)], this is a target variable
 
 
+20.02.2019
+Ready. Train the Siamese network on pairs of digits
+https://github.com/rstudio/keras/blob/master/vignettes/examples/mnist_siamese_graph.py
+Train the Siamese network on pairs of images
+Train the Siamese network on multiple images (imbalanced number of classes to pair)
+Maybe apply the image generator (augment images)
+Maybe detect whales flukes on the images and pre-process the whole dataset with this feature in use.
+Improve the initial Siamese network structure
+Predict the output
+
+How to use keras ImageDataGenerator with a Siamese or Tripple networks
+https://stackoverflow.com/questions/41633087/how-to-use-keras-imagedatagenerator-with-a-siamese-or-tripple-networks
+Using the Keras ImageDataGenerator with a Siamese Network
+http://sujitpal.blogspot.com/2017/02/using-keras-imagedatagenerator-with.html
+https://stackoverflow.com/questions/54637064/how-to-train-siamese-network-in-keras
+one shot learning
+https://github.com/Goldesel23/Siamese-Networks-for-One-Shot-Learning/blob/master/image_augmentor.py
+maybe interesting:
+One Shot Learning and Siamese Networks in Keras
+https://sorenbouma.github.io/blog/oneshot/
+maybe interesting:
+How to do One Shot Learning using Siamese Networks?
+https://medium.com/@shrutijadon10104776/why-i-feel-sad-being-woman-in-tech-3de052ba4fa1
+
+How to train the Siamese network on pairs of images?
+
+#load train and test 
+df1 = pd.read_csv("../input/train.csv")
+df2 = pd.read_csv("../input/test.csv")
+
+https://stackoverflow.com/questions/43697240/how-can-i-split-a-dataset-from-a-csv-file-for-training-and-testing
+from numpy.random import RandomState
+rng = RandomState()
+train = df1.sample(frac=0.7, random_state=rng)
+test = df1.loc[~df.index.isin(train.index)]
+
+maybe interesting:
+train_test_split
+https://medium.com/themlblog/splitting-csv-into-train-and-test-data-1407a063dd74
+https://towardsdatascience.com/train-test-split-and-cross-validation-in-python-80b61beca4b6
+Data preprocessing
+http://localhost:8888/notebooks/5-Copy1.2-using-convnets-with-small-datasets-input.ipynb#Data-preprocessing
+
+Multi-Input Keras Model Using flow_from_dataframe
+https://stackoverflow.com/questions/54781089/multi-input-keras-model-using-flow-from-dataframe
+
+How to train Siamese network in Keras? (flow_from_dataframe, double generators)
+https://stackoverflow.com/questions/54637064/how-to-train-siamese-network-in-keras
+
+google "pandas series Compare values with string"
+https://stackoverflow.com/questions/46650337/comparing-string-entries-in-two-pandas-series
+
+google: "pandas series where values are equal to list members"
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.isin.html
 

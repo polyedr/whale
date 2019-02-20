@@ -16,6 +16,7 @@ from __future__ import print_function
 from pprint import pprint
 
 import numpy as np
+import pandas as pd
 
 import random
 from keras.datasets import mnist
@@ -26,6 +27,9 @@ from keras import backend as K
 
 
 # Calculate distance between images
+from sklearn.model_selection import train_test_split
+
+
 def euclidean_distance(vects):
     x, y = vects
     return K.sqrt(K.maximum(K.sum(K.square(x - y), axis=1, keepdims=True), K.epsilon()))
@@ -86,7 +90,90 @@ def compute_accuracy(predictions, labels):
 
 
 # the data, shuffled and split between train and test sets
-(x_train, y_train), (x_test, y_test) = mnist.load_data()
+# MNIST
+# (x_train, y_train), (x_test, y_test) = mnist.load_data()
+
+
+# Import whales data
+# https://medium.com/@vijayabhaskar96/tutorial-on-keras-flow-from-dataframe-1fd4493d237c
+traindf = pd.read_csv("../input/train.csv", dtype=str)
+# remove new whales from input
+traindf = traindf[traindf.Id != "new_whale"]
+# remove single whales values
+traindf = traindf.groupby("Id").filter(lambda x: len(x) > 1)
+
+# Show data example
+print(traindf.head(1))
+
+# Split the data into labels and features
+y = traindf.Id
+X = traindf.drop('Id', axis=1)
+x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+print(x_train.shape)
+print(y_train.shape)
+print(x_test.shape)
+print(y_test.shape)
+
+# Flow from dataframe
+
+
+
+### extracted model run start
+input_dim = 784
+epochs = 8
+
+
+# Digit indices from the source script
+# digit_indices = [np.where(y_test == i)[0] for i in range(10)]
+# pprint(digit_indices)
+
+# Update these indexes to calculate them over all the target classes Id
+# First obtain list with all the classes. It seems better to extract classes from the initial dataset (before split).
+unique_ids = [traindf['Id'].unique() for col_name in traindf.columns]
+#pprint(unique_ids)
+pprint(y_test)
+# digit_indices = [np.where(y_test.equal(i))[0] for i in unique_ids]
+digit_indices = y_test.isin(unique_ids)
+# for i in unique_ids:
+#     if
+
+pprint(digit_indices)
+pprint(len(digit_indices))
+
+# tr_pairs, tr_y = create_pairs(x_test, digit_indices)
+
+"""
+digit_indices = [np.where(y_test == i)[0] for i in range(10)]
+te_pairs, te_y = create_pairs(x_test, digit_indices)
+
+# network definition
+base_network = create_base_network(input_dim)
+
+input_a = Input(shape=(input_dim,))
+input_b = Input(shape=(input_dim,))
+
+# because we re-use the same instance `base_network`,
+# the weights of the network
+# will be shared across the two branches
+processed_a = base_network(input_a)
+processed_b = base_network(input_b)
+
+distance = Lambda(euclidean_distance,
+                  output_shape=eucl_dist_output_shape)([processed_a, processed_b])
+
+model = Model([input_a, input_b], distance)
+# train
+rms = RMSprop()
+model.compile(loss=contrastive_loss, optimizer=rms)
+model.fit([tr_pairs[:, 0], tr_pairs[:, 1]], tr_y,
+          batch_size=128,
+          epochs=epochs,
+          validation_data=([te_pairs[:, 0], te_pairs[:, 1]], te_y))
+
+### extracted model run end
+"""
+
+"""
 x_train = x_train.reshape(60000, 784)
 x_test = x_test.reshape(10000, 784)
 x_train = x_train.astype('float32')
@@ -98,7 +185,6 @@ epochs = 8
 
 # create training+test positive and negative pairs
 digit_indices = [np.where(y_train == i)[0] for i in range(10)]
-pprint(digit_indices)
 tr_pairs, tr_y = create_pairs(x_train, digit_indices)
 
 digit_indices = [np.where(y_test == i)[0] for i in range(10)]
@@ -137,3 +223,4 @@ te_acc = compute_accuracy(pred, te_y)
 
 print('* Accuracy on training set: %0.2f%%' % (100 * tr_acc))
 print('* Accuracy on test set: %0.2f%%' % (100 * te_acc)) 
+"""

@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b1e4bcca-2334-47fa-80f2-7610fbf8eb64" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mnist_siamese_graph.py" beforeDir="false" afterPath="$PROJECT_DIR$/mnist_siamese_graph.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tracking.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../tracking.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,8 +17,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kernel_vgg19_simple.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="683">
-              <caret line="368" column="11" selection-start-line="367" selection-end-line="373" selection-end-column="43" />
+            <state relative-caret-position="-1146">
+              <caret line="135" column="32" lean-forward="true" selection-start-line="135" selection-start-column="32" selection-end-line="135" selection-end-column="32" />
               <folding>
                 <element signature="e#179#188#0" expanded="true" />
               </folding>
@@ -24,13 +26,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mnist_siamese_graph.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-720">
-              <caret line="48" column="12" lean-forward="true" selection-start-line="46" selection-end-line="46" selection-end-column="33" />
+            <state relative-caret-position="447">
+              <caret line="99" column="41" selection-start-line="99" selection-start-column="41" selection-end-line="99" selection-end-column="41" />
               <folding>
-                <element signature="e#484#522#0" expanded="true" />
+                <element signature="e#463#501#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/whales_siamese_graph.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="139" column="21" lean-forward="true" selection-start-line="139" selection-start-column="21" selection-end-line="139" selection-end-column="21" />
+              <folding>
+                <element signature="e#463#501#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -41,6 +55,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>adam</find>
+      <find>validation</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -51,14 +66,14 @@
       <list>
         <option value="$PROJECT_DIR$/kernel_vgg19_simple.py" />
         <option value="$PROJECT_DIR$/mnist_siamese_graph.py" />
+        <option value="$PROJECT_DIR$/whales_siamese_graph.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="260" />
-    <option name="y" value="22" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="4" />
+    <option name="width" value="1912" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -96,7 +111,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.whales_siamese_graph">
     <configuration name="mnist_siamese_graph" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="kernel" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -118,8 +133,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="whales_siamese_graph" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="kernel" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/whales_siamese_graph.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.whales_siamese_graph" />
         <item itemvalue="Python.mnist_siamese_graph" />
       </list>
     </recent_temporary>
@@ -138,15 +175,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1044" extended-state="6" />
+    <frame x="4" y="0" width="1912" height="1040" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18028466" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18104817" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32969433" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32894737" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -171,22 +208,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mnist_siamese_graph.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="99" column="41" selection-start-line="99" selection-start-column="41" selection-end-line="99" selection-end-column="41" />
+          <folding>
+            <element signature="e#463#501#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/kernel_vgg19_simple.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="683">
-          <caret line="368" column="11" selection-start-line="367" selection-end-line="373" selection-end-column="43" />
+        <state relative-caret-position="-1146">
+          <caret line="135" column="32" lean-forward="true" selection-start-line="135" selection-start-column="32" selection-end-line="135" selection-end-column="32" />
           <folding>
             <element signature="e#179#188#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mnist_siamese_graph.py">
+    <entry file="file://$PROJECT_DIR$/whales_siamese_graph.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-720">
-          <caret line="48" column="12" lean-forward="true" selection-start-line="46" selection-end-line="46" selection-end-column="33" />
+        <state relative-caret-position="527">
+          <caret line="139" column="21" lean-forward="true" selection-start-line="139" selection-start-column="21" selection-end-line="139" selection-end-column="21" />
           <folding>
-            <element signature="e#484#522#0" expanded="true" />
+            <element signature="e#463#501#0" expanded="true" />
           </folding>
         </state>
       </provider>
