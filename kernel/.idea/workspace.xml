@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1e4bcca-2334-47fa-80f2-7610fbf8eb64" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/whales_siamese_graph.py" beforeDir="false" afterPath="$PROJECT_DIR$/whales_siamese_graph.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kernel_inceptionV3.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/kernel_inceptionV3.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tracking.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../tracking.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,7 +17,7 @@
         <entry file="file://$PROJECT_DIR$/kernel_vgg19_simple.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="795">
-              <caret line="257" lean-forward="true" selection-start-line="257" selection-end-line="257" />
+              <caret line="257" selection-start-line="257" selection-end-line="257" />
               <folding>
                 <element signature="e#179#188#0" expanded="true" />
               </folding>
@@ -28,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/kernel_inceptionV3_1.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="302">
-              <caret line="177" column="29" lean-forward="true" selection-start-line="177" selection-start-column="29" selection-end-line="177" selection-end-column="29" />
+              <caret line="177" column="29" selection-start-line="177" selection-start-column="29" selection-end-line="177" selection-end-column="29" />
               <folding>
                 <element signature="e#56#92#0" expanded="true" />
               </folding>
@@ -231,7 +232,7 @@
     <entry file="file://$PROJECT_DIR$/kernel_inceptionV3_1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="302">
-          <caret line="177" column="29" lean-forward="true" selection-start-line="177" selection-start-column="29" selection-end-line="177" selection-end-column="29" />
+          <caret line="177" column="29" selection-start-line="177" selection-start-column="29" selection-end-line="177" selection-end-column="29" />
           <folding>
             <element signature="e#56#92#0" expanded="true" />
           </folding>
@@ -241,7 +242,7 @@
     <entry file="file://$PROJECT_DIR$/kernel_vgg19_simple.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="795">
-          <caret line="257" lean-forward="true" selection-start-line="257" selection-end-line="257" />
+          <caret line="257" selection-start-line="257" selection-end-line="257" />
           <folding>
             <element signature="e#179#188#0" expanded="true" />
           </folding>

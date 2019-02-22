@@ -527,7 +527,7 @@ https://www.kaggle.com/martinpiotte/whale-recognition-model-with-score-0-78563/d
 
 interesting:
 I've started to read this example:
-siamese on fasshion mnist, perhaps this example is simple and understandable (and ImageDataGenerator is here, too)
+siamese on fashion mnist, perhaps this example is simple and understandable (and ImageDataGenerator is here, too)
 https://www.kaggle.com/kmader/image-similarity-with-siamese-networks/notebook
 def gen_random_batch(in_groups, batch_halfsize = 8):
     out_img_a, out_img_b, out_score = [], [], []
@@ -545,3 +545,25 @@ https://machinelearningmastery.com/index-slice-reshape-numpy-arrays-machine-lear
 https://machinelearningmastery.com/machine-learning-data-transforms-for-time-series-forecasting/
 https://docs.scipy.org/doc/numpy/reference/generated/numpy.reshape.html
 
+22.02.2019
+
+How to convert raw images to tensors?
+https://keras.io/preprocessing/image/
+.flow_from_directory(directory)
+https://gist.github.com/fchollet/0830affa1f7f19fd47b06d4cf89ed44d
+
+maybe interesting:
+Convert image to array for CNN
+https://stackoverflow.com/questions/47186880/convert-image-to-array-for-cnn
+some about images convertation
+https://towardsdatascience.com/image-detection-from-scratch-in-keras-f314872006c9
+
+matplotlib subplots:
+https://stackoverflow.com/questions/3584805/in-matplotlib-what-does-the-argument-mean-in-fig-add-subplot111
+
+http://localhost:8888/notebooks/kernel/image-similarity-with-siamese-networks-fashion-whale.ipynb
+With this notebook I've converted images to arrays.
+And I was stacked wih re-shaping.
+Data sources are lists but not numpy arrays. I should find numpy array.
+
+One numpy arrays convertation example is here, https://www.kaggle.com/lgmoneda/from-image-files-to-numpy-arrays/notebook
