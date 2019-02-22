@@ -133,7 +133,11 @@ unique_ids = [traindf['Id'].unique() for col_name in traindf.columns]
 #pprint(unique_ids)
 pprint(y_test)
 # digit_indices = [np.where(y_test.equal(i))[0] for i in unique_ids]
-digit_indices = y_test.isin(unique_ids)
+
+#convert to string
+y_test = y_test.str
+# digit_indices = y_test.isin(unique_ids)
+digit_indices = [np.where(y_test == str(i))[0] for i in unique_ids]
 # for i in unique_ids:
 #     if
 

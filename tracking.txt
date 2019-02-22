@@ -499,3 +499,49 @@ https://stackoverflow.com/questions/46650337/comparing-string-entries-in-two-pan
 google: "pandas series where values are equal to list members"
 https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.isin.html
 
+maybe interesting:
+https://www.kaggle.com/qgh1223/inceptionv3-siamesenet/comments
+
+
+jupyter nbconvert --to script kernel_inceptionV3.ipynb
+
+
+https://www.kaggle.com/khaled34/siamese-0-822
+
+Uploading data to a Kaggle Notebook
+https://www.kaggle.com/general/51785
+humpback-whale-identification
+
+https://www.kaggle.com/datasets
+
+https://www.kaggle.com/iishchukov/humpbackwhaleidentificationmetadata
+draft environment/add data
+
+google "kaggle simple siamese images"
+https://www.kaggle.com/kmader/image-similarity-with-siamese-networks
+https://www.kaggle.com/arpandhatt/siamese-neural-networks
+
+for further reading:
+https://www.kaggle.com/martinpiotte/whale-recognition-model-with-score-0-78563/data
+
+
+interesting:
+I've started to read this example:
+siamese on fasshion mnist, perhaps this example is simple and understandable (and ImageDataGenerator is here, too)
+https://www.kaggle.com/kmader/image-similarity-with-siamese-networks/notebook
+def gen_random_batch(in_groups, batch_halfsize = 8):
+    out_img_a, out_img_b, out_score = [], [], []
+    all_groups = list(range(len(in_groups)))
+
+interesting:
+This example was attetmpted to apply
+This example was basic (mnist_siamese_graph.py):
+https://github.com/rstudio/keras/blob/master/vignettes/examples/mnist_siamese_graph.py
+
+
+https://pandas.pydata.org/pandas-docs/version/0.20/generated/pandas.Series.reshape.html
+
+https://machinelearningmastery.com/index-slice-reshape-numpy-arrays-machine-learning-python/
+https://machinelearningmastery.com/machine-learning-data-transforms-for-time-series-forecasting/
+https://docs.scipy.org/doc/numpy/reference/generated/numpy.reshape.html
+
