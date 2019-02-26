@@ -567,3 +567,6 @@ And I was stacked wih re-shaping.
 Data sources are lists but not numpy arrays. I should find numpy array.
 
 One numpy arrays convertation example is here, https://www.kaggle.com/lgmoneda/from-image-files-to-numpy-arrays/notebook
+
+26.02.2018
+Images converted to arrays with opencv are numpy arrays
