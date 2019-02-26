@@ -570,3 +570,11 @@ One numpy arrays convertation example is here, https://www.kaggle.com/lgmoneda/f
 
 26.02.2018
 Images converted to arrays with opencv are numpy arrays
+maybe interesting:
+http://krasserm.github.io/2018/02/07/deep-face-recognition/
+https://aboveintelligent.com/face-recognition-with-keras-and-opencv-2baf2a83b799
+https://stackoverflow.com/questions/47186880/convert-image-to-array-for-cnn
+
+
+
+
